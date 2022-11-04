@@ -12,11 +12,6 @@ int main(int argc, char **argv)
 {
 	int i, add = 0;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-		return (0);
-	}
 	for (i = 1; i < argc; i++)
 	{
 		if (*argv[i] >= '0' && *argv[i] <= '9')
@@ -27,6 +22,7 @@ int main(int argc, char **argv)
 			return (1);
 		}
 	}
-	printf("%d\n", add);
+	if (add >= 0)
+		printf("%d\n", add);
 	return (0);
 }
